@@ -7,7 +7,7 @@ async function apiRequest(){
         const data = await response.json()
 
         console.log(data)
-        document.querySelector('h2').innerText = data.plantName
+        document.querySelector('h2').innerText = data.cultivar + ' ' + data.name
     }catch(error){
         console.log(error)
     }
