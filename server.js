@@ -36,6 +36,7 @@ app.get('/api/:plantName', (req, res) => { // colon lets express know that the q
 
   if(plants[plantsName]) {
     res.json(plants[plantsName])
+    document.querySelector('h2').innerText = plants[plantsName].cultivar + ' ' + plants[plantsName].name
   } else {
     res.json(plants['unknown'])
   }
