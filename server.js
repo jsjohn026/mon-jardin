@@ -31,11 +31,11 @@ app.get('/', (req, res) => {
 })
 
 // Create API that will send JSON objects
-app.get('/api/:plantName', (req, res) => { // colon lets express know that the query parameter is going to be on the url
-  const plantsName = req.params.plantName.toLowerCase();
+app.get('/api/:name', (req, res) => { // colon lets express know that the query parameter is going to be on the url
+  const plantName = req.params.name.toLowerCase();
 
-  if(plants[plantsName]) {
-    res.json(plants[plantsName])
+  if(plants[plantName]) {
+    res.json(plants[plantName])
   } else {
     res.json(plants['unknown'])
   }

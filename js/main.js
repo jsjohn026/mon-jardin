@@ -3,7 +3,7 @@ document.querySelector('button').addEventListener('click', apiRequest)
 async function apiRequest(){
     const plantName = document.querySelector('input').value
     try{
-        const response = await fetch(`https://mon-jardin-d0gp.onrender.com/api/${plantName}`)
+        const response = await fetch(`api/:${plantName}`)
         const data = await response.json()
 
         console.log(data)
