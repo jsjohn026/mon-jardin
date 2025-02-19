@@ -42,4 +42,7 @@ app.get('/api/:name', (req, res) => { // colon lets express know that the query 
   }
 })
 
-// tell server to list
+// tell server to listen for requests and confirm in console
+app.listen(process.env.PORT || PORT, ()=> {
+  console.log(`The server is running on port ${PORT}! You better go catch it!`)
+})
